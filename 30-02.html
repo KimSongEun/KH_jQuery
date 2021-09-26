@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 교재 189 - 194</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // myF, $myF 변수 이름으로 $은 티만 내는 것이지 name에서 사용가능한 특수 기호_ $ 중 하나일 뿐임.
+            var $myF = $("#content");
+            $myF.css("color", "red");
+
+            var $myF2 = document.getElementById("content2");
+            // $myF2.css("color", "red");
+            $myF2.style.color = "blue";
+
+            var myF2 = document.getElementById("content2");
+            myF2.style.color = "green";
+            var $myF2 = $(myF2); // jQuery Node형 변환
+            console.log($myF2.css("color")); // color 값이 무엇인지 읽기
+            $myF2.css("color", "red"); // color 값을 red로 변경
+            console.log($myF2.css("color")); // color 값이 무엇인지 읽기
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="content">컨텐트부분</div>
+    <div id="content2">컨텐트부분</div>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+    <button id="btn4">버튼4</button>
+
+</body>
+
+</html>

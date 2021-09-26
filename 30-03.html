@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 교재 189 - 199</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- p190  -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("#frontEnd").css("border", "1px solid #ff00ff");
+            $("#backEnd").css("border", "1px solid #00ffff");
+        });
+    </script> -->
+    <!-- p191 -->
+    <!-- <script>
+        $(document).ready(function () {
+            $(".java").css("background", "wheat");
+        });
+    </script> -->
+
+    <!-- p192 -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("h2").css("text-decoration", "underline");
+        });
+    </script> -->
+
+    <!-- p193 -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("[href]").css("background", "pink");
+        });
+    </script> -->
+
+    <!-- p194 -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("[href]").css("background", "pink");
+            $("[href$=js]").css("background", "lightgreen");
+        });
+    </script> -->
+
+    <!-- p199 -->
+    <script>
+        $(document).ready(function () { //$(function () { 도 가능
+            var $list = $("ul li");
+            $list.each(function () {
+                console.log($(this).text());
+                console.log(this.innerText);
+            });
+            $list.each(f1);
+            $list.each(f2);
+
+            function f1(a) {
+                console.log(a);
+            }
+
+            function f2(a, b) {
+                console.log(b.innerText);
+                //console.log(element.textContent); 
+                //console.log($(element).text()); 
+            }
+
+            // $("#backEnd").find(".java").eq(0).css("background", "yellow");
+            // $("#backEnd").find(".java").get(0).style.background = yellow;
+
+            $("ul").children(".java").eq(0).css("background", "yellow");
+            // $("#backEnd").children(".java").get(0).style.background = yellow;
+
+            // jQuery의 장점
+            // $("#backEnd").children(".java").eq(0).css("background", "yellow");
+            // 오류 $("#backEnd").children(".java").get(0).style.background = yellow;
+
+            console.log("이것은 뿌려지는지 확인하는 곳");
+
+            // $("#DOM").parent().css("border","1px solid black"); 
+            $("#DOM").parents().css("border","1px solid black"); 
+
+            // $("#DOM").prev().css("border", "2px solid #f00");
+            // $("#BOM").prevAll().css("border", "1px solid #00f");
+            // $("#JS_CORE").next().css("border","1px solid #f0a")
+            // $("#test").nextAll().css("border", "1px solid #0af");
+
+            var newFirstDiv = "<div>새로운 블럭</div>";
+            $("body").prepend(newFirstDiv);
+            $("body").prepend("<div> 또 새로운 블럭</div>");
+
+            var newFirstDiv = "<div>새로운 블럭</div>";
+            $("body").append(newFirstDiv);
+            $("body").append("<div> 또 새로운 블럭</div>");
+
+            $("body").before("<div> before : 또 새로운 블럭</div>");
+
+            //삭제버튼 동적 추가 
+            // $("body").append($("<button id='btnRemove'>삭제</button>")); 
+            $("<button id='btnRemove'>삭제</button>").appendTo($("body")); 
+
+            $("#btnRemove").addClass("c1");
+            $("li.java").addClass("c1");
+            // $("li.java").attr("value", 20); // html에서 적용가능한 속성명="값"
+            $("li.java").prop("value", 100); // html에서 적용가능한 속성명="값"
+
+            $(".js").remove();
+            // $("#frontEnd").remove();
+
+            $("body").before("<div class = 'c1'> before : 클래스 추가</div>");
+        });
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <div id="frontEnd">
+        <h2>Front End</h2>
+        <ul>
+            <li class="myFavourite">html</li>
+            <li class="myFavourite">css</li>
+            <li class="js">JavaScript
+                <ul>
+                    <li id="JS_CORE"><a href="./JavaScript_Core.html">JavaScript Core</a></li>
+                    <li id="DOM"><a href="./DOM.js">DOM</a></li>
+                    <li id="BOM"><a href="./BOM.js">BOM</a></li>
+                </ul>
+            </li>
+            <li class="js">jQuery</li>
+        </ul>
+    </div>
+    <div id="backEnd">
+        <h2>Back End</h2>
+        <ol>
+            <li class="java myFavourite">java</li>
+            <li class="java">jsp/servlet</li>
+            <li class="myFavourite">oracle</li>
+        </ol>
+    </div>
+</body>
+
+</html>

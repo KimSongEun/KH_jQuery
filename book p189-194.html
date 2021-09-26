@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 교재 189 - 194</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- p190  -->
+    <script>
+        $(document).ready(function () {
+            $("#frontEnd").css("border", "1px solid #ff00ff");
+            $("#backEnd").css("border", "1px solid #00ffff");
+        });
+    </script>
+    <!-- p191 -->
+    <script>
+        $(document).ready(function () {
+            $(".java").css("background", "wheat");
+        });
+    </script>
+
+    <!-- p192 -->
+    <script>
+        $(document).ready(function () {
+            $("h2").css("text-decoration", "underline");
+        });
+    </script>
+
+    <!-- p193 -->
+    <script>
+        $(document).ready(function () {
+            $("[href]").css("background", "pink");
+        });
+    </script>
+
+    <!-- p194 -->
+    <script>
+        $(document).ready(function () {
+            $("[href]").css("background", "pink");
+            $("[href$=js]").css("background", "lightgreen");
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="frontEnd">
+        <h2>Front End</h2>
+        <ul>
+            <li class="myFavourite">html</li>
+            <li class="myFavourite">css</li>
+            <li class="js">JavaScript
+                <ul>
+                    <li id="JS_CORE"><a href="./JavaScript_Core.html">JavaScript Core</a></li>
+                    <li id="DOM"><a href="./DOM.js">DOM</a></li>
+                    <li id="BOM"><a href="./BOM.js">BOM</a></li>
+                </ul>
+            </li>
+            <li class="js">jQuery</li>
+        </ul>
+    </div>
+    <div id="backEnd">
+        <h2>Back End</h2>
+        <ul>
+            <li class="java myFavourite">java</li>
+            <li class="java">jsp/servlet</li>
+            <li class="myFavourite">oracle</li>
+        </ul>
+    </div>
+</body>
+
+</html>
